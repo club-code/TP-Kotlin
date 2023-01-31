@@ -33,7 +33,7 @@ class BackgroundScreen : KtxScreen {
     override fun render(delta: Float) {
         clearScreen(red = 1f, green = 1f, blue = 1f)
         shapeRenderer.use(ShapeRenderer.ShapeType.Filled) {
-            //            universe.draw(shapeRenderer)
+            universe.draw(shapeRenderer)
             shapeRenderer.color = Color.PURPLE
             lineList.forEach {
                 shapeRenderer.rect(it.first.first, it.first.second, it.second.first, it.second.second)
