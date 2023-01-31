@@ -40,6 +40,10 @@ class BackgroundScreen : KtxScreen {
                 shapeRenderer.rect(it.first.first, it.first.second, it.second.first, it.second.second)
             }
         }
+        if (Gdx.input.isButtonJustPressed(Input.Buttons.LEFT)) {
+            universe.switch(Gdx.input.x / Cell.cellSize, (Gdx.graphics.height - Gdx.input.y) / Cell.cellSize)
+            // LibGDX is a little dumb on certain things.
+        }
         if (Gdx.input.isKeyJustPressed(Input.Keys.SPACE)) {
             universe.update()
         }
