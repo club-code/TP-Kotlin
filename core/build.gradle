@@ -7,5 +7,4 @@ dependencies {
   api "io.github.libktx:ktx-assets:$ktxVersion"
   api "io.github.libktx:ktx-graphics:$ktxVersion"
   api "org.jetbrains.kotlin:kotlin-stdlib:$kotlinVersion"
-  implementation "space.earlygrey:shapedrawer:$shapedrawerVersion"
 }

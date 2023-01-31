@@ -1,17 +1,17 @@
 package conway
 
-import space.earlygrey.shapedrawer.ShapeDrawer
+import com.badlogic.gdx.graphics.glutils.ShapeRenderer
 
 /**
  * Represents a Cell in the Universe.
  */
 class Cell {
-    fun draw(shapeDrawer: ShapeDrawer) {
+    fun draw(shapeRenderer: ShapeRenderer) {
         TODO("Draw the shape")
     }
 
     companion object {
         val cellSize = 50
-        val borderSize = 1.5f
+        val borderSize = 4f
     }
 }
