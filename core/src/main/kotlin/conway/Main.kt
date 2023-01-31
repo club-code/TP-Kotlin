@@ -21,7 +21,7 @@ class BackgroundScreen : KtxScreen {
     private val universe = Universe(
         width = Gdx.graphics.width / Cell.cellSize,
         height = Gdx.graphics.height / Cell.cellSize,
-        population = 100
+        population = 10
     )
 
     // The list of the lines we'll have to draw
