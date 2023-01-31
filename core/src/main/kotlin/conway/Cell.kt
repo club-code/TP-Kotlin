@@ -17,6 +17,12 @@ class Cell(val x: Int, val y: Int, val alive: Boolean = true) {
         )
     }
 
+    fun getNeighbours() = listOf(
+        x - 1 to y - 1, x - 1 to y, x - 1 to y + 1,
+        x to y - 1, x to y + 1,
+        x + 1 to y - 1, x + 1 to y, x + 1 to y + 1
+    )
+
     override fun equals(other: Any?) = other is Cell && other.x == x && other.y == y
 
     companion object {

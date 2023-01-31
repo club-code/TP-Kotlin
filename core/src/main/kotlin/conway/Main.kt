@@ -1,6 +1,7 @@
 package conway
 
 import com.badlogic.gdx.Gdx
+import com.badlogic.gdx.Input
 import com.badlogic.gdx.graphics.Color
 import com.badlogic.gdx.graphics.glutils.ShapeRenderer
 import ktx.app.KtxGame
@@ -21,7 +22,7 @@ class BackgroundScreen : KtxScreen {
     private val universe = Universe(
         width = Gdx.graphics.width / Cell.cellSize,
         height = Gdx.graphics.height / Cell.cellSize,
-        population = 10
+        population = 50
     )
 
     // The list of the lines we'll have to draw
@@ -39,8 +40,8 @@ class BackgroundScreen : KtxScreen {
                 shapeRenderer.rect(it.first.first, it.first.second, it.second.first, it.second.second)
             }
         }
-//        if (Gdx.input.isKeyJustPressed(Input.Keys.SPACE)) {
-//            universe.update()
-//        }
+        if (Gdx.input.isKeyJustPressed(Input.Keys.SPACE)) {
+            universe.update()
+        }
     }
 }
