@@ -1,5 +1,6 @@
 package conway
 
+import com.badlogic.gdx.Gdx
 import com.badlogic.gdx.graphics.Color
 import com.badlogic.gdx.graphics.Pixmap
 import com.badlogic.gdx.graphics.Texture
@@ -33,10 +34,16 @@ class BackgroundScreen : KtxScreen {
             val region = TextureRegion(texture, 0, 0, 1, 1)
             ShapeDrawer(batch, region)
     }
+    private val universe = Universe(
+        width = Gdx.graphics.width / 50,
+        height = Gdx.graphics.height / 50,
+        population = 100
+    )
+    // We'd like 50 pixels per cell.
     override fun render(delta: Float) {
         clearScreen(red = 1f, green = 1f, blue = 1f)
         batch.use {
-            shapeDrawer.circle(0f,0f,100f)
+            universe.draw(shapeDrawer)
         }
     }
 }
