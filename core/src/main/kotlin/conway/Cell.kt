@@ -24,6 +24,11 @@ class Cell(val x: Int, val y: Int, var alive: Boolean = true) {
     )
 
     override fun equals(other: Any?) = other is Cell && other.x == x && other.y == y
+    override fun hashCode(): Int {
+        var result = x
+        result = 31 * result + y
+        return result
+    }
 
     companion object {
         const val cellSize = 50
