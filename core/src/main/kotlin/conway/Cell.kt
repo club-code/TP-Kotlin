@@ -26,7 +26,7 @@ class Cell(val x: Int, val y: Int, val alive: Boolean = true) {
     override fun equals(other: Any?) = other is Cell && other.x == x && other.y == y
 
     companion object {
-        val cellSize = 50
-        val borderSize = 4f
+        const val cellSize = 50
+        const val borderSize = 4f
     }
 }
