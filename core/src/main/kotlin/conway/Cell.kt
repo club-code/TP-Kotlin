@@ -6,9 +6,10 @@ import com.badlogic.gdx.graphics.glutils.ShapeRenderer
 /**
  * Represents a Cell in the Universe.
  */
-class Cell(val x: Int, val y: Int, var alive: Boolean = true) {
+sealed class Cell(val x: Int, val y: Int) {
+    abstract val color: Color
     fun draw(shapeRenderer: ShapeRenderer) {
-        shapeRenderer.color = if (alive) Color.BLACK else Color.WHITE
+        shapeRenderer.color = color
         shapeRenderer.rect(
             x.toFloat() * cellSize,
             y.toFloat() * cellSize,
@@ -34,4 +35,16 @@ class Cell(val x: Int, val y: Int, var alive: Boolean = true) {
         const val cellSize = 50
         const val borderSize = 4f
     }
+}
+
+class Dirt(x: Int, y: Int): Cell(x,y) {
+    override val color: Color = Color.BROWN
+}
+
+class Water(x: Int, y: Int): Cell(x,y) {
+    override val color: Color = Color.BLUE
+}
+
+class Mud(x: Int, y: Int): Cell(x,y) {
+    override val color: Color = Color.GRAY
 }
