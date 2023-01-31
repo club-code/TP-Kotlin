@@ -11,7 +11,7 @@ class Cell(val x: Int, val y: Int) {
     }
 
     companion object {
-        val cellSize = 50
-        val borderSize = 4f
+        const val cellSize = 50
+        const val borderSize = 4f
     }
 }
