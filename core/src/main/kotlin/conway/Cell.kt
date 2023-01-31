@@ -9,4 +9,9 @@ class Cell {
     fun draw(shapeDrawer: ShapeDrawer) {
         TODO("Draw the shape")
     }
+
+    companion object {
+        val cellSize = 50
+        val borderSize = 1.5f
+    }
 }

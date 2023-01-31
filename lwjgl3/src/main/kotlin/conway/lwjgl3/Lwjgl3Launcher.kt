@@ -10,7 +10,7 @@ import conway.Main
 fun main() {
     Lwjgl3Application(Main(), Lwjgl3ApplicationConfiguration().apply {
         setTitle("Conway's Game of Life")
-        setWindowedMode(640, 480)
+        setWindowedMode(650, 500)
         setWindowIcon("club_code.png")
     })
 }
