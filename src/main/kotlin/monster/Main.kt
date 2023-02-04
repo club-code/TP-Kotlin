@@ -3,9 +3,9 @@ package monster
 fun main(args: Array<String>) {
     /*
     // Question 1
-    val gnome = Monster("Gnome", 0.8, "Your Garden")
-    val vampire = Monster("Vampire", 2.0, "Transylvania")
-    val javaDev = Monster("Java Developer", 1.75, "He could be in this very room !")
+    val gnome = Monster(name = "Gnome", size = 0.8, location = "Your Garden")
+    val vampire = Monster(name = "Vampire", size = 2.0, location = "Transylvania")
+    val javaDev = Monster(name = "Java Developer", size = 1.75, location = "He could be in this very room !")
     println(gnome)
     println(vampire)
     println(javaDev)
